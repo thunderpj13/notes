@@ -20,7 +20,7 @@
 
    - Each process has a pointer (`mm_struct`→`pgd`) to its own *Page Global Directory (`PGD`)* which is a physical page frame. The linear address is as follow:
 
-     ![](/home/james/git-repository/notes/os/linux-vm-photoes/pgd-pmd-pte.png)
+     ![](./linux-vm-photoes/pgd-pmd-pte.png)
 
    - `PTE`： `pte_t` is simply a 32 bit integer within a struct. Each `pte_t` points to an address of a page frame and all the addresses  are guaranteed to be page aligned. Therefore, there are `PAGE_SHIFT` (12) bits in that 32 bit value that are free for status bits of the page table entry.
 
@@ -36,7 +36,7 @@
 
   - Relationship between address space related structures:
 
-    ​	![](/home/james/git-repository/notes/os/linux-vm-photoes/address-space-structures.png)
+    ​	![](./linux-vm-photoes/address-space-structures.png)
 
   - `mm_struct`: one for each precess, one for all the threads in a process.
 
@@ -76,7 +76,7 @@
 
      - 示意图
 
-       ![](/home/james/git-repository/notes/os/linux-vm-photoes/free-page-block.png)
+       ![](./linux-vm-photoes/free-page-block.png)
      
    - fragmentation
    
